@@ -1,4 +1,5 @@
 from fontes.gupy import buscar_vagas_gupy
+from fontes.remotar import buscar_vagas_remotar
 from util.filtros import filtrar_vagas
 import pandas as pd
 import os
@@ -11,7 +12,12 @@ def salvar_csv(vagas, caminho='src/output/vagas_qa.csv'):
 
 def main():
     print("🔍 Buscando vagas no Gupy...")
-    todas_vagas = buscar_vagas_gupy()
+    vagas_gupy = buscar_vagas_gupy()
+
+    print("🔍 Buscando vagas no Remotar...")
+    vagas_remotar = buscar_vagas_remotar()
+
+    todas_vagas = vagas_gupy + vagas_remotar
     vagas_filtradas = filtrar_vagas(todas_vagas)
 
     if not vagas_filtradas:

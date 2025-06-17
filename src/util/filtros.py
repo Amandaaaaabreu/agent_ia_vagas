@@ -1,6 +1,6 @@
 palavras_chave = [
     'qa', 'quality assurance', 'teste de software', 'testes',
-    'analista de testes', 'automação de testes', 'engenharia de qualidade'
+    'analista de testes', 'automação de testes', 'engenharia de qualidade', 'front-end', 'estágio'
 ]
 
 def filtrar_vagas(vagas):
