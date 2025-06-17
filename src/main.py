@@ -21,7 +21,7 @@ def main():
     vagas_filtradas = filtrar_vagas(todas_vagas)
 
     if not vagas_filtradas:
-        print("❌ Nenhuma vaga de QA encontrada.")
+        print("❌ Nenhuma vaga encontrada.")
     else:
         for vaga in vagas_filtradas:
             print(f"- {vaga['titulo'].title()}: {vaga['link']}")
